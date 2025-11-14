@@ -71,7 +71,7 @@ detener_motor()
 La relación de composición indica que el motor forma parte esencial del vehículo:
 si el vehículo deja de existir, su motor también.
 
-🔗 Relaciones del Sistema
+Relaciones del Sistema
 ✔ Herencia
 
 Automovil y Motocicleta heredan de Vehiculo.
