@@ -1,10 +1,10 @@
-📝 Explicación del Programa
+Explicación del Programa
 
 Este programa implementa un sistema orientado a objetos que modela diferentes tipos de vehículos y su motor, aplicando herencia, composición y principios básicos de POO en Python.
 
 El objetivo es simular el comportamiento de un vehículo genérico, así como de sus dos subclases principales: Automóvil y Motocicleta. Además, se incluye la clase Motor, que se incorpora a cada vehículo mediante composición, representando la parte fundamental del funcionamiento.
 
-🚗 Clases del Programa
+Clases del Programa
 1. Clase Vehiculo (Clase Padre)
 
 Representa las características generales de un vehículo.
@@ -80,7 +80,7 @@ Automovil y Motocicleta heredan de Vehiculo.
 
 Tanto Automovil como Motocicleta contienen un objeto Motor.
 
-▶️ Funcionamiento del Programa
+Funcionamiento del Programa
 
 El programa permite:
 
