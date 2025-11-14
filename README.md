@@ -88,7 +88,7 @@ El programa permite:
 - Mostrar la información completa de cada uno  
 - Comprobar el uso del motor mediante composición  
 
-Ejemplo de ejecución:
+ Ejemplo de ejecución:
 
 ```python
 moto = Motocicleta("Yamaha", "FZ", 2022, 150, Motor("Gasolina", 14))
