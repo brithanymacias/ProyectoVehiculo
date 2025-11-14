@@ -1,101 +1,57 @@
-Explicación del Programa
+# 🚗 Sistema de Vehículos en Python (POO con Herencia, Composición y Encapsulamiento)
 
-Este programa implementa un sistema orientado a objetos que modela diferentes tipos de vehículos y su motor, aplicando herencia, composición y principios básicos de POO en Python.
+Este proyecto implementa un sistema orientado a objetos en Python aplicando los principios fundamentales de la Programación Orientada a Objetos:
 
-El objetivo es simular el comportamiento de un vehículo genérico, así como de sus dos subclases principales: Automóvil y Motocicleta. Además, se incluye la clase Motor, que se incorpora a cada vehículo mediante composición, representando la parte fundamental del funcionamiento.
+- **Herencia**
+- **Encapsulamiento con @property**
+- **Composición**
+- **Métodos de comportamiento**
+- **Sobrescritura de métodos (`__str__`)**
 
-Clases del Programa
-1. Clase Vehiculo (Clase Padre)
+El sistema modela vehículos, incluyendo automóviles y motocicletas, cada uno con sus propias características, pero compartiendo atributos comunes gracias a la herencia.
 
-Representa las características generales de un vehículo.
-Incluye atributos comunes como:
+---
 
-marca
+## 📘 Estructura del Proyecto
 
-modelo
+El programa está compuesto por las siguientes clases:
 
-año
+---
 
-Y métodos básicos:
+### 🔹 **1. Clase Vehiculo (Superclase)**  
+Contiene:
 
-encender()
+- Atributos privados: `marca`, `modelo`, `anio`
+- Encapsulamiento mediante `@property` y `@setter`
+- Métodos de comportamiento: `encender()`, `apagar()`
+- Implementación del método especial `__str__()`
 
-apagar()
+---
 
-__str__() para mostrar información del vehículo.
+### 🔹 **2. Clase Motor (Composición)**  
+Cada vehículo tiene un motor.
 
-Esta clase sirve como base para los otros tipos de vehículos.
+- Atributos privados: `tipo`, `potencia`
+- Métodos: `encender_motor()`, `detener_motor()`
+- Sobrescritura de `__str__()`
 
-2. Clase Automovil (Hereda de Vehiculo)
+---
 
-Amplía la funcionalidad del vehículo añadiendo:
+### 🔹 **3. Clase Automovil (Hija de Vehiculo)**  
+Incluye:
 
-número de puertas
+- Atributo adicional: `puertas`
+- Composición: incluye un objeto `Motor`
+- Métodos: `abrir_maletero()`, `tocar_claxon()`
+- Sobrescritura de `__str__()` usando `super()`
 
-métodos propios como:
+---
 
-abrir_maletero()
+### 🔹 **4. Clase Motocicleta (Hija de Vehiculo)**  
+Incluye:
 
-tocar_claxon()
+- Atributo adicional: `cilindraje`
+- Contiene un `Motor` (composición)
+- Métodos: `hacer_caballito()`, `usar_patada_arranque()`
+- Sobrescritura de `__str__()` usando `super()`
 
-Tiene una relación de composición con la clase Motor, ya que todo automóvil posee un motor y sin él no funciona.
-
-3. Clase Motocicleta (Hereda de Vehiculo)
-
-Incluye atributos específicos de una moto:
-
-cilindraje
-
-Y métodos únicos como:
-
-hacer_caballito()
-
-usar_patada_arranque()
-
-También incluye un objeto Motor mediante composición.
-
-4. Clase Motor (Composición)
-
-Define características y comportamientos del motor:
-
-tipo de motor
-
-potencia
-
-Con métodos:
-
-encender_motor()
-
-detener_motor()
-
-La relación de composición indica que el motor forma parte esencial del vehículo:
-si el vehículo deja de existir, su motor también.
-
-Relaciones del Sistema
-✔ Herencia
-
-Automovil y Motocicleta heredan de Vehiculo.
-
-✔ Composición
-
-Tanto Automovil como Motocicleta contienen un objeto Motor.
-
-Funcionamiento del Programa
-
-El programa permite:
-
-Crear diferentes vehículos.
-
-Encenderlos, apagarlos o activar acciones específicas.
-
-Mostrar la información completa de cada uno.
-
-Comprobar el uso del motor mediante composición.
-
-Ejemplo común de ejecución:
-
-moto = Motocicleta("Yamaha", "FZ", 2022, 150, Motor("Gasolina", 14))
-automovil = Automovil("Chevrolet", "Spark", 2020, 4, Motor("Gasolina", 80))
-
-print(moto)
-print(automovil)
