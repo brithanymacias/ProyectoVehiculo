@@ -5,7 +5,7 @@ class Automovil(Vehiculo):
     def __init__(self, marca, modelo, anio, puertas, motor: Motor):
         super().__init__(marca, modelo, anio)
         self.puertas = puertas
-        self.motor = motor  # Composición
+        self.motor = motor  
 
     # Métodos de comportamiento
     def abrir_maletero(self):
@@ -16,3 +16,4 @@ class Automovil(Vehiculo):
 
     def __str__(self):
         return f"{super().__str__()} - Automóvil {self.puertas} puertas, {self.motor}"
+
